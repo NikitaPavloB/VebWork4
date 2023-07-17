@@ -58,10 +58,10 @@ $workExperience = [
 
         <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container">
-            <img src="https://imgfon.ru/Images/Details_img_880px/Animals/glaza-belyy_fon-kotik-morda-polosatyy.webp"
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/1912454/pub_5d876bebaad43600aead756f_5d87ab2543863f00aea92f3b/scale_1200"
               style="width:100%" alt="Avatar">
             <div class="w3-display-bottomleft w3-container w3-text-black">
-              <h2>Котик</h2>
+              <h2>Я</h2>
             </div>
           </div>
           <div class="w3-container">
