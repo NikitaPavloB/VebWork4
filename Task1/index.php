@@ -1,4 +1,23 @@
 <?php
+$name = "Я";
+$profession = "Человек";
+$city = "Большой";
+$email = "Секретный";
+$number = "Известный";
+$skills = [
+  [
+    'name' => 'Фотошоп',
+    'percent' => 100,
+  ],
+  [
+    'name' => 'Иллюстратор',
+    'percent' => 100,
+  ],
+  [
+    'name' => 'Медиа',
+    'percent' => 100,
+  ],
+];
 // Массив с данными об опыте работы
 $workExperience = [
   [
@@ -58,38 +77,41 @@ $workExperience = [
 
         <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container">
-            <img src="https://avatars.dzeninfra.ru/get-zen_doc/1912454/pub_5d876bebaad43600aead756f_5d87ab2543863f00aea92f3b/scale_1200"
+            <img
+              src="https://avatars.dzeninfra.ru/get-zen_doc/1912454/pub_5d876bebaad43600aead756f_5d87ab2543863f00aea92f3b/scale_1200"
               style="width:100%" alt="Avatar">
             <div class="w3-display-bottomleft w3-container w3-text-black">
-              <h2>Я</h2>
+              <h2>
+                <?= $name; ?>
+              </h2>
             </div>
           </div>
           <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Профессия</p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Город, страна</p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>E-mail</p>
-            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Телефон</p>
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $profession; ?>
+            </p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $city; ?>
+            </p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $email; ?>
+            </p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $number; ?>
+            </p>
             <hr>
 
             <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Навыки</b></p>
-            <p>Adobe Photoshop</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-            </div>
-            <p>Photography</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-                <div class="w3-center w3-text-white">80%</div>
+            <?php for ($i = 0; $i < count($skills); $i++):
+              $procent = $skills[$i]["percent"];
+              ?>
+              <p>
+                <?php echo $skills[$i]["name"] ?>
+              </p>
+              <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $procent ?>%"><?php echo $procent ?>%</div>
               </div>
-            </div>
-            <p>Illustrator</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-            </div>
-            <p>Media</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-            </div>
+            <?php endfor; ?>
             <br>
 
             <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Языки</b>
